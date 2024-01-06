@@ -1,0 +1,12 @@
+#!/bin/bash
+x=2
+y=5
+z=$[ $x * $y ]
+echo $z
+
+RIGHT_NOW=$(date +"%x %r %Z %A")
+echo $RIGHT_NOW;
+echo fin nereikai jokiu akin kabuciu
+x=`echo "scale=20; 2345.23 / 454.2" | bc`
+z=$(echo "scale="20; 2345.23 / 454.2" | bc)
+echo $z | $x ":)

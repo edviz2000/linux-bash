@@ -1,0 +1,20 @@
+#!/bin/bash
+for x in $@
+do
+	echo $x
+        case $x in
+                -terminate) echo "0";;
+                -y) echo "Option -y with param $2";;
+                -*) echo  "Cmon.";;
+        esac
+done
+
+while [ -n "$1" ]
+do
+	case "$1" in
+ 		-terminate) echo "0";;
+		-y) echo "Option -y with param $2";;
+		-*) echo  "Cmon.";;
+	esac
+	shift
+done

@@ -1,0 +1,23 @@
+#!/bin/bash
+a=4
+b=5
+c=$[$a*$b]
+echo $c
+echo $[$a * $b]
+
+echo __________________
+
+RIGHT_NOW=$(date +"%x %r %Z %A")
+echo $RIGHT_NOW;
+echo no kabutes.
+x=`echo "scale=20; 2345.23 / 454.2" | bc`
+z=$(echo "scale=20; 2345.23 / 454.2" | bc)
+echo $z "|" $x ":)"
+
+if (($a+2>$b))
+then
+	(( a = $a + 2100 ))
+	echo $a
+else
+	echo $b
+fi

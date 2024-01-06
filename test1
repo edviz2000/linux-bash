@@ -1,0 +1,88 @@
+#!/bin/bash
+echo TEST1 workin.
+bongo=BONGO!
+bong='Bongo bong!'
+date
+who;
+ls
+echo We say $bongo we say $bong! On `date`.
+#ls >> cur.dir
+printf "\n";
+echo "KLAUSKITE!"
+read;
+ss=$(($RANDOM));
+echo $RANDOM;
+
+if test $ss -lt 12000 
+then
+	echo "Taip!";
+fi
+
+if [ $ss -ge 12000 -a $ss -lt 20000 ] 
+then
+        echo "Ne.";
+fi
+
+if [ $ss -ge 20001 -a $ss -lt 33000 ] 
+then
+        echo "Gal...";
+fi
+printf "\n";
+
+echo 'exit value = ' $?
+
+zero2=''
+if [ -z $zero ]
+then
+	echo NULIS
+else
+	echo OK
+fi
+
+if [ -e test12 ]
+then
+        echo Rastas test12.
+else
+        echo 'test12' nerastas...
+fi
+
+if [ -O test1 ]
+then
+        echo Owned.
+else
+        echo Error
+fi
+
+if [[ $USER == e* ]]
+then
+	echo "Hi" $USER
+else 
+	echo 'Who is this?'
+fi
+
+file='list'
+for list_item in `cat $file`
+do
+	echo $list_item
+done
+for list_item in $(cat $file)
+do
+        echo '('  $list_item   ')'
+done
+
+for file in ./*
+do
+ 	echo $file
+done
+
+IFS=,
+for value in `cat csv`
+do
+	echo $value
+done | sort > for_output
+
+for (( i = 0; i < 5 ; i ++ ))
+do
+	echo $i
+done
+

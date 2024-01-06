@@ -1,0 +1,19 @@
+#!/bin/bash
+
+exec 5>&0
+
+exec 0<user_input_getopt
+
+count=1
+while read line
+do
+	echo "Line $count: $line"
+	count=$[ $count + 1 ]
+done
+ 
+exec 0<&5;
+read -p "Jau?(>5): " x
+if [ $x \> 5 ] 
+then
+	echo "Ate."
+fi 

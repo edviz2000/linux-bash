@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo Start.
+
+while getopts st:g opt
+do
+	case "$opt" in
+	s) echo "Ssssssss" ;;
+	t) echo "Ttttttt with $OPTARG" ;;
+	*) echo "Unknown $opt" ;;
+	esac
+done
+echo BREAK $OPTIND
+shift $[ $OPTIND - 4 ]
+
+while getopts ":st:g" opt
+do
+	echo $opt
+        case "${opt}" in
+        s) echo "Ssssssss" ;;
+        t) echo "Ttttttt with $OPTARG" ;;
+        *) echo "Unknown $opt" ;;
+        esac
+done
+

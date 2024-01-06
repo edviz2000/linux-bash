@@ -1,0 +1,10 @@
+#!/bin/bash
+x=`echo "scale=20; 2345.23 / 454.2" | bc`
+y=`cat test1`;
+echo x=$x echo $y
+
+bc << HERE
+scale=5 
+5*6
+45.45/34.2
+HERE

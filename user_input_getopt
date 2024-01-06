@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -- `getopt -q ab:c "$@"`
+
+params=$@
+# params="$@" veikia
+# params='$@' no, ima kaip stringa
+
+while [ -n "$1" ]
+do
+	case "$1" in 
+	-a) echo Found S;;
+	--) shift;;
+	esac
+	echo "$1"
+shift
+done
+
+
+
+for x in $params
+do
+echo $x
+done
